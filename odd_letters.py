@@ -16,7 +16,7 @@ Problem:
 Tests:
 
     >>> reduce('harmonise')
-    hrose
+    hroie
     >>> reduce('diplodocus')
     dpoou
     >>> reduce('tyrannosaurus')
@@ -33,3 +33,12 @@ def run_tests():
 # Edit this code:
 def reduce(text):
 
+    length = len(text)
+    newword = ""
+
+    for n in range(length):
+
+        if n % 2 == 0:
+            newword = newword + text[n]
+
+    print(newword)

@@ -44,7 +44,34 @@ def run_tests():
 # Edit this code:
 def encode(text, n):
 
+    length = len(text)
+    newword = ""
+    newletter = ""
+
+    for i in range(length):
+        if text[i] == " ":
+            newword = newword + text[i]
+
+        elif text[i] != " ":
+            newletter = ord(text[i]) + n
+            newword = newword + chr(newletter)
+
+    print(newword)
+
 
 
 def decode(text, n):
 
+    length = len(text)
+    newword = ""
+    newletter = ""
+
+    for i in range(length):
+        if text[i] == " ":
+            newword = newword + text[i]
+
+        elif text[i] != " ":
+            newletter = ord(text[i]) - n
+            newword = newword + chr(newletter)
+
+    print(newword)
